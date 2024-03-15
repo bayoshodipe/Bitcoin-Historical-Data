@@ -32,7 +32,7 @@ change column `Tranc_datetime` `Tranc_datetime` Date;
 
 ```
 
-2. I substituted every "NAN" values in all the columns with 0 and change the column data type to Double
+2. I substituted every "NaN" values in all the columns with 0 and change the column data type to Double
 
 ```sql
 # Replacing NAN values to 0 for Open_price
