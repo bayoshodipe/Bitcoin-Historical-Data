@@ -67,3 +67,13 @@ from bitcoin_dataset_details
 where Open_price != 0
 order by Tranc_datetime Asc;
 ```
+## Summary of Findings
+1. To discern market trends and assess the current state of Bitcoin, the simple moving average (SMA) was employed. The simple moving average of 50 days and 200 days is calculated to know the current market trend for the last 50 days. when the SMA-50 exceeds the SMA-200 the market is on the up trend and if the opposite, it is in a downtrend as indicated in the report.
+
+2. Beyond price fluctuations, this analysis uncovers intriguing insights into Bitcoin trading volume. Following the peak in 2015, which saw approximately 5.5 million Bitcoins traded, the volume declined to around 851,000. The data further reveals key trading hours, with peak trading activity occurring between 3 p.m. and 5 p.m., while the quietest hours fall between 3 a.m. and 6 a.m.
+
+3. The year 2018 witnessed a significant drop in Bitcoin's price, plummeting from around $17,000 to roughly $3,600. A similar decline occurred in late 2019 when the price fell from approximately $12,000 to about $7,000. However, 2020 marked a remarkable turnaround when Bitcoin's price surged from roughly $7,000 to an impressive $29,000. The trend continued into 2021, with Bitcoin nearly doubling in value, soaring from around $29,000 to a staggering $58,000. This analysis delves into these pivotal moments and their impact on the cryptocurrency market.
+
+## Conclusion
+The utilization of a 50-day and 200-day Simple Moving Average (SMA) provided a deeper understanding of market trends which offers valuable insights for those navigating the cryptocurrency market. Beyond price and moving averages, the analysis brings to light the fluctuations in Bitcoin's trading volume, offering a glimpse into the dynamics of Bitcoin trading hours. this analysis offers valuable insights for investors, traders, and anyone intrigued by the evolving world of cryptocurrency.
+
