@@ -45,7 +45,6 @@ change column `Open_price` `Open_price` Double;
 
 ```
 
-
 3. I inserted another column for the Transaction ID which has an incremental value and serves as the primary key for the table and I moved it to the first position in the table
 
  ```sql
@@ -56,4 +55,15 @@ add column Tranc_ID int NOT NULL Primary key AUTO_INCREMENT;
 # Moving column Tran_ID to first position on the table
 alter table bitcoin_dataset_details
 change Tranc_ID Tranc_ID int first;
+```
+
+4. I exported the cleaned data (those that have Open price value transactions other than 0) into another .csv file for further analysis on PowerBI
+ ```sql
+# Export the cleaned data into a csv file
+select * into outfile
+'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\bitcoin_dataset.csv'
+fields terminated by ',' lines terminated by '\n'
+from bitcoin_dataset_details
+where Open_price != 0
+order by Tranc_datetime Asc;
 ```
