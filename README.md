@@ -13,4 +13,22 @@ The historic Bitcoin data analysis presented here unveils a fascinating journey 
 **Data Visualization** - PowerBI
 
 ## SQL Cleaning Techniques
+The raw data was in unix timestamp and I have to convert it to Timedate in order to extract the date and time
 
+```sql
+# Setting values to Tranc_time column by spliting Tranc_Datetime to time
+update bitcoin_dataset_details set Tranc_time = substring_index(Tranc_datetime, ' ', -1);
+
+# Change Tranc_time column data type to time
+alter table bitcoin_dataset_details 
+change column `Tranc_time` `Tranc_time` Time;
+
+# Setting values to Tranc_datetime column by spliting Tranc_Datetime to date
+update bitcoin_dataset_details set Tranc_datetime = substring_index(Tranc_datetime, ' ', 1);
+
+# Change Tranc_datetime column data type to date
+alter table bitcoin_dataset_details 
+change column `Tranc_datetime` `Tranc_datetime` Date;
+
+
+```
