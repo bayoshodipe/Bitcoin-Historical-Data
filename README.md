@@ -46,4 +46,14 @@ change column `Open_price` `Open_price` Double;
 ```
 
 
-3. 
+3. I inserted another column for the Transaction ID which has an incremental value and serves as the primary key for the table and I moved it to the first position in the table
+
+ ```sql
+# Adding Transaction ID to each entry
+alter table bitcoin_dataset_details
+add column Tranc_ID int NOT NULL Primary key AUTO_INCREMENT;
+
+# Moving column Tran_ID to first position on the table
+alter table bitcoin_dataset_details
+change Tranc_ID Tranc_ID int first;
+```
